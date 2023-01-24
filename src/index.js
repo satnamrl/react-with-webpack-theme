@@ -1,6 +1,8 @@
-const sayHelloManyTimes = (times) =>
-  new Array(times).fill(1).map((_, i) => `Hello ${i + 1}`);
+import React from "react";
+import { createRoot } from "react-dom/client";
+import Hello from "./components/Hello.jsx";
+import "./assets/css/style.css";
 
-const helloDiv = document.createElement("div");
-helloDiv.innerHTML = sayHelloManyTimes(15).join("<br/>");
-document.body.append(helloDiv);
+const container = document.getElementById("root");
+const root = createRoot(container);
+root.render(<Hello />);
